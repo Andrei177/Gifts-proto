@@ -22,6 +22,7 @@ body{
     align-items: center;
 }
 .title__name{
+    text-align: center;
     font-family: Lato;
     font-size: 48px;
     color: white;
@@ -46,11 +47,14 @@ body{
     text-align: center;
 }
 .tovar__desc{
-    padding-top: 30px;
+    flex-grow: 1;
     font-size: 20px;
     font-weight: 500;
+    flex-grow: 7;
+    padding: 30px 20px 30px 20px;
 }
 .tovar__link{
+    flex-grow: 1;
     text-decoration: none;
     font-size: 24px;
     color: white;
@@ -58,7 +62,99 @@ body{
     padding: 20px 30px;
 }
 .tovar__link-block{
+    flex-grow: 1;
+    text-align: end;
+    padding-right: 30px;
+}
+.tovar__description{
     display: flex;
-    justify-content: end;
-    margin-top: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 1150px){
+    .tovar__link-block{
+        text-align: center;
+    }
+    .container{
+        width: 95vw;
+    }
+    .tovar__desc{
+        font-size: 28px;
+    }
+}
+@media (max-width: 990px){
+    .container{
+        width: 98vw;
+    }
+    .tovar__desc{
+        padding: 3px 5px;
+    }
+    .tovar__link-block{
+        flex-grow: 1;
+    }
+    .tovar__description{
+        justify-content: space-around;
+    }
+}
+@media (max-width: 915px){
+    .container{
+        width: 99vw;
+    }
+    .tovar__desc{
+        padding: 1px 2px;
+        flex-grow: 2;
+    }
+    .tovar__link-block{
+        flex-grow: 1;
+    }
+    .tovar__description{
+        justify-content: space-around;
+    }
+}
+@media (max-width: 830px){
+    .title__name{
+        font-size: 35px;
+    }
+    .tovar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 65vw;
+        margin: 0 auto;
+    }
+    .tovar__desc{
+        font-size: 35px;
+        padding-bottom: 35px;
+    }
+    .tovar__link-block{
+        text-align: start;
+        padding: 0;
+    }
+    .tovar__link{
+        padding: 20px 80px;
+        font-size: 30px;
+    }
+}
+@media (max-width: 560px){
+    .tovar__link{
+        padding: 20px calc(100vw / 10);
+    }
+    .tovar{
+        width: 93vw;
+    }
+    .tovar__img{
+        width: 95vw;
+    }
+}
+@media (max-width: 280px){
+    .tovar__link{
+        padding: 20px auto;
+    }
+    .tovar{
+        width: 95vw;
+    }
+    .tovar__img{
+        width: 95vw;
+    }
 }
